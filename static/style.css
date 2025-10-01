@@ -28,7 +28,7 @@ body {
     align-items: center;
     width: 400px;
     height: 500px;
-    background: transparent;
+    background: transparent; /* Precisa ser corrigido no Chrome (webkit) */
     border: 5px solid var(--secondary-color);
     border-radius: 10px;
     transition: .5s;
