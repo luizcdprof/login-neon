@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Login - Projeto Cantina
+{% endblock %}
+
+{% block header %}
+    <h1>Login</h1>
+{% endblock %}
+
+{% block content %}
+    <form method="POST" action="{{ url_for('usuario_login') }}">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}<br>
+            {% for error in form.username.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+            {% for error in form.password.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+    <p>Não tem uma conta? <a href="{{ url_for('usuario_cadastrar') }}">Cadastre-se aqui</a>.</p>
+{% endblock %}
+
+{% block footer %}
+    Projeto Cantina - 2024
+{% endblock %}

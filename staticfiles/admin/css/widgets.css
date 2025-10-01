@@ -446,7 +446,7 @@ span.clearable-file-input label {
     border-top: none;
     font-weight: 700;
     font-size: 0.75rem;
-    color: #333;
+    color: var(#333);
     background: var(--accent);
 }
 

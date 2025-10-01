@@ -9,7 +9,11 @@
 {% endblock %}
 
 {% block content %}
-    Página inicial do projeto
+    Projeto Cantina - Bem-vindo!
+    <p>Este é o sistema de gerenciamento da cantina.</p>
+    <p>Aqui você pode gerenciar produtos, pedidos e muito mais.</p>
+
+    <a href="{% url 'usuario_login' %}">Login</a> | <a href="{% url 'usuario_cadastrar' %}">Registrar</a>
 {% endblock %}
 
 {% block footer %}
